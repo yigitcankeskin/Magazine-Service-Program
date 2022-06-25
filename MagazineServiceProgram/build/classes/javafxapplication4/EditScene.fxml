@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="814.0" stylesheets="@caspian.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.FXMLDocumentController2">
+   <children>
+      <SplitPane dividerPositions="0.1016597510373444" layoutX="262.0" layoutY="153.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="253.0" layoutY="15.0" text="MAGAZİNE SERVİCE2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <SplitPane dividerPositions="0.13551401869158877" layoutX="294.0" layoutY="89.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutX="274.0" prefHeight="0.0" prefWidth="197.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToViewScene" prefHeight="55.0" prefWidth="248.0" text="View" />
+                                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToEditScene" prefHeight="55.0" prefWidth="257.0" text="Edit" textAlignment="CENTER" />
+                                    <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToCreateScene" prefHeight="55.0" prefWidth="243.0" text="Create" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <SplitPane dividerPositions="0.49663526244952894" layoutX="244.0" layoutY="87.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <SplitPane dividerPositions="0.5" layoutX="59.0" layoutY="57.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="TableSupplements" layoutX="59.0" prefHeight="124.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="ColumnId" editable="false" prefWidth="75.0" text="Supplement ID" />
+                                                            <TableColumn fx:id="ColumnName" editable="false" prefWidth="75.0" text="Supplement Name" />
+                                                            <TableColumn fx:id="ColumnCost" editable="false" prefWidth="75.0" text="Supplement Cost" />
+                                                         </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                   <children>
+                                                      <TableView fx:id="TableCustomers" layoutX="63.0" layoutY="42.0" prefHeight="122.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <columns>
+                                                            <TableColumn fx:id="ColumnCustomerID" editable="false" prefWidth="75.0" text="Customer ID" />
+                                                            <TableColumn fx:id="ColumnCustomerName" editable="false" prefWidth="75.0" text="Customer Name" />
+                                                            <TableColumn fx:id="ColumnCustomerEmail" editable="false" prefWidth="75.0" text="Customer Email" />
+                                                         </columns>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                   </children>
+                                                </AnchorPane>
+                                             </items>
+                                          </SplitPane>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                       <children>
+                                          <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <tabs>
+                                                <Tab text="Supplement Info">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Label alignment="CENTER" text="Supplement Informations" textAlignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="20.0" left="20.0" top="10.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <GridPane prefHeight="154.0" prefWidth="371.0">
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <children>
+                                                                        <Label text="Supplemet ID" />
+                                                                        <Label text="Supplement Name" GridPane.rowIndex="1" />
+                                                                        <Label text="Supplement Date" GridPane.rowIndex="2" />
+                                                                        <Label text="Supplement Customer IDs" GridPane.rowIndex="3" />
+                                                                        <TextField fx:id="FieldID" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="FieldName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="FieldDate" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <TextField fx:id="FieldCustomerIDs" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Label text="Supplement Cost" GridPane.rowIndex="4" />
+                                                                        <TextField fx:id="FieldCost" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </GridPane>
+                                                                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Button fx:id="ButtonUpdateSupplement" mnemonicParsing="false" onAction="#ButtonUpdateSupplement" text="Update">
+                                                                           <HBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </HBox.margin>
+                                                                        </Button>
+                                                                        <Button fx:id="ButtonRemoveSupplement" mnemonicParsing="false" onAction="#ButtonRemoveSupplement" text="Remove">
+                                                                           <HBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </HBox.margin>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                                <Tab text="Customer Info">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <Label alignment="CENTER" text="Customer Informations" textAlignment="CENTER">
+                                                                     <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                     </font>
+                                                                     <padding>
+                                                                        <Insets bottom="20.0" left="20.0" top="10.0" />
+                                                                     </padding>
+                                                                  </Label>
+                                                                  <GridPane>
+                                                                     <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="161.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="170.0" />
+                                                                     </columnConstraints>
+                                                                     <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                     </rowConstraints>
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                                                     </VBox.margin>
+                                                                     <children>
+                                                                        <Label text="ID" />
+                                                                        <Label text="Name" GridPane.rowIndex="1" />
+                                                                        <Label text="Payment" GridPane.rowIndex="2" />
+                                                                        <Label text="Email" GridPane.rowIndex="3" />
+                                                                        <Label text="Adress" GridPane.rowIndex="4" />
+                                                                        <Label text="Status" GridPane.rowIndex="5" />
+                                                                        <Label text="SupplementIds" GridPane.rowIndex="6" />
+                                                                        <Label text="Associate Customer Ids(if there is)" GridPane.rowIndex="7" />
+                                                                        <TextField fx:id="FieldCustomerId" GridPane.columnIndex="1" />
+                                                                        <TextField fx:id="FieldCustomerName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <TextField fx:id="FieldCustomerPayment" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <TextField fx:id="FieldCustomerEmail" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <TextField fx:id="FieldCustomerAdress" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                        <TextField fx:id="FieldCustomerStatus" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                        <TextField fx:id="FieldCustomerSupplementIds" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                        <TextField fx:id="FieldCustomerAssociateCustomers" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                     </children>
+                                                                  </GridPane>
+                                                                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Button fx:id="ButtonUpdateCustomer" mnemonicParsing="false" onAction="#ButtonUpdateCustomer" text="Update">
+                                                                           <HBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </HBox.margin>
+                                                                        </Button>
+                                                                        <Button fx:id="ButtonRemoveCustomer" mnemonicParsing="false" onAction="#ButtonRemoveCustomer" text="Remove">
+                                                                           <HBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </HBox.margin>
+                                                                        </Button>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                             </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
